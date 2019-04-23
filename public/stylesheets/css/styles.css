@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+.white {
+  color: white;
+}
+
+.page-container {
+  background-image: url("/img/background-login.png");
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.login-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.login-header #logo {
+  color: #0ed9a0;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  text-shadow: 0px 4px 13px rgba(14, 217, 160, 0.2);
+}
+
+.login-header #tagline {
+  color: #fff;
+}
+
+.login-header nav ul {
+  list-style: none;
+}
+
+.login-header nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.login-header nav a {
+  color: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.login-header nav a:hover {
+  color: #0ed9a0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.login {
+  background-color: rgba(0, 0, 0, 0.6);
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  border-radius: 6px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login h2 {
+  padding: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.login form input,
+.login .submit {
+  display: block;
+  width: 90%;
+  margin: 15px auto;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.login form input:focus {
+  outline: 2px solid #0ed9a0;
+}
+
+.login .submit {
+  background-color: #0ed9a0;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 5px 23px -2px rgba(15, 219, 161, 0.3);
+  box-shadow: 0px 5px 23px -2px rgba(15, 219, 161, 0.3);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login .submit:hover {
+  -webkit-box-shadow: 0px 5px 23px -2px rgba(15, 219, 161, 0.7);
+  box-shadow: 0px 5px 23px -2px rgba(15, 219, 161, 0.7);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login .no-account {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.login .signup {
+  color: #0ed9a0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login .signup:hover {
+  color: #0da57a;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+  .login-header {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .login {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    padding: 0 2%;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 60px;
+}
+
+header #top-navigation {
+  height: 30px;
+  background-color: #1DB954;
+  width: 100%;
+}
+
+header #top-navigation .container {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+}
+
+header #top-navigation ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #top-navigation li {
+  padding-left: 20px;
+}
+
+header #top-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+header #logo {
+  max-height: 45px;
+}
+
+.main-header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.main-header li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.main-header li a {
+  color: black;
+  text-decoration: none;
+}

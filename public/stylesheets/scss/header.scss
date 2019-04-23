@@ -1,0 +1,33 @@
+@import ('variables');
+header {
+  height: 60px;
+  #top-navigation {
+    height: 30px;
+    background-color: $green;
+    width: 100%;
+  }
+
+  #top-navigation .container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    line-height: 30px;
+  }
+  #top-navigation ul {
+    list-style: none;
+    display: flex;
+  }
+
+  #top-navigation li {
+    padding-left: 20px;
+  }
+
+  #top-navigation a {
+    color: white;
+    text-decoration: none;
+  }
+  #logo {
+    max-height: 45px;
+  }
+}
