@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/activity', (req, res) =>{
+  res.render('activity');
+})
+
 app.get('/login', (req, res) => {
   res.render('login');
 })
