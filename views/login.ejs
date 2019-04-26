@@ -27,12 +27,12 @@
     <section class="page-content">
       <div class="login">
         <h2>Login</h2>
-        <form action="" method="POST">
-          <input name="username" type="text" placeholder="johndoe@gmail.com">
-          <input type="password" placeholder="•••••••••••">
+        <form action="/login" method="POST">
+          <input name="username" type="text" placeholder="username">
+          <input name="password" type="password" placeholder="•••••••••••">
           <button class='submit'>LOGIN</button>
         </form>
-        <p class="no-account"><small>Don't have an account? <span class="signup">Click here to sign up for free.</span> </small></p>
+        <p class="no-account"><small>Don't have an account? <span class="signup"><a href="/register">Click here to sign up for free.</a></span> </small></p>
       </div>
     </section>
   </div>

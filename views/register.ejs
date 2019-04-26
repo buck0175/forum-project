@@ -1,0 +1,49 @@
+<% include partials/head %>
+
+<div class="register-container">
+  <div class="register-left flex-split">
+    <div id="register-to-action">
+      <div class="back-to-login">
+        <p><a href="/login"><i class="fas fa-chevron-left"></i> Back to login</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="register-side" class="flex-split">
+    <form id="registration-form" action="/register" method="POST">
+        <h2>User Registration Form</h2>
+        <fieldset>
+          <label for="firstName">First Name</label>
+          <input class="registration-input" id="firstName" type="text" name="fisrtName" placeholder="First Name">
+        </fieldset>
+
+        <fieldset>
+          <label for="lastName">Last Name</label>
+          <input class="registration-input" id="lastName" type="text" name="lastName" placeholder="Last Name">
+        </fieldset>
+
+        <fieldset>
+          <label for="email">Email</label>
+          <input class="registration-input" id="email" type="email" name="email" placeholder="johndoe@gmail.com">
+        </fieldset>
+
+        <fieldset>
+          <label for="userName">Username</label>
+          <input class="registration-input" id="username" type="text" name="username" placeholder="johndoe">
+        </fieldset>
+
+        <fieldset>
+          <label for="passWord">Password</label>
+          <input class="registration-input" id="password" type="password" name="password" placeholder="•••••••••••">
+        </fieldset>
+
+        <fieldset>
+          <button class="submit">Submit</button>
+        </fieldset>
+
+    </form>
+  </div>
+</div>
+
+
+
+<% include partials/footer %>

@@ -13,7 +13,7 @@ var User = require('./models/user');
 
 
 
-mongoose.connect('mongodb://localhost/forum');
+mongoose.connect('mongodb://ben:Pickle6134@ds141960.mlab.com:41960/envocode');
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -40,7 +40,7 @@ app.use(function(req, res, next){
 })
 
 
-app.get('/', (req, res) => {
+app.get('/', isLoggedIn, (req, res) => {
   res.render('index');
 });
 
@@ -51,8 +51,14 @@ app.get('/register', (req, res)=> {
 });
 
 app.post('/register', (req, res)=>{
-  var newUser = new User({username: req.body.username, email: req.body.email});
-  User.reguster(newUser, req.body.password, function(err, user){
+  var newUser = new User(
+    {
+      username: req.body.username,
+      email: req.body.email,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName
+    });
+  User.register(newUser, req.body.password, function(err, user){
     if(err){
       console.log(err);
       return res.redirect('register');
@@ -72,7 +78,7 @@ app.post('/login', passport.authenticate('local',
     successRedirect: '/',
     failureRedirect: '/login'
   }), (req, res) => {
-
+    
 });
 
 // Logout Route
