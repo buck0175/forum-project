@@ -146,14 +146,12 @@ body {
   margin: 0 auto 15px;
 }
 
-.login .signup {
+.login .signup a {
   color: #0ed9a0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  text-decoration: none;
 }
 
-.login .signup:hover {
+.login .signup a:hover {
   color: #0da57a;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -305,14 +303,20 @@ body {
   border-radius: 100%;
 }
 
-.logout a {
+#main-navigation .logout i {
   color: white;
+  margin-left: 10px;
 }
 
 body {
   background-color: #F2F2F2;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.flex-fifty {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
 }
 
 .avatar {
@@ -372,28 +376,75 @@ textarea {
   color: gray;
 }
 
-#sidebar-profile {
+.sidebar .account {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 
-#sidebar-profile img {
-  height: 50px;
-  width: 50px;
+.sidebar img {
+  height: 80px;
+  width: 80px;
   overflow: hidden;
+  text-align: center;
   border-radius: 100%;
 }
 
-#sidebar-profile .account {
+.sidebar .profile-bio {
+  padding: 20px 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .profile-stats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 10px 0 0;
+}
+
+.sidebar .followers {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .followers,
+.sidebar .posts {
+  width: 50%;
+  padding: 10px 0;
+}
+
+.sidebar .sidebar-button {
+  height: 50px;
+  width: 100%;
+  background-color: #0ed9a0;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.sidebar .sidebar-button:hover {
+  background-color: #0da57a;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.sidebar .sidebar-button {
+  background-color: #00171c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #feed .btn {
@@ -522,8 +573,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.registration-form form input,
-.registration-form form label {
+.registration-input {
   display: block;
 }
 
@@ -533,7 +583,7 @@ fieldset {
 }
 
 fieldset label {
-  padding: 5px 0;
+  padding: 10px 0;
   font-size: 17px;
   font-weight: bold;
 }

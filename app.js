@@ -10,6 +10,8 @@ var session = require('express-session');
 
 // Requires the model with Passport-local Mongoose plugged in.
 var User = require('./models/user');
+var Comments = require('./models/comments');
+var Post = require('./models/post');
 
 
 
@@ -41,7 +43,13 @@ app.use(function(req, res, next){
 
 
 app.get('/', isLoggedIn, (req, res) => {
-  res.render('index');
+  Post.find({}, function(err, allPosts){
+    if(err){
+      console.log(err);
+    }else {
+      res.render('index', {posts:allPosts});
+    }
+  })
 });
 
 // Authentication Routes
@@ -50,7 +58,7 @@ app.get('/register', (req, res)=> {
   res.render('register');
 });
 
-app.post('/register', (req, res)=>{
+app.post('/register', usernameToLowerCase, (req, res)=>{
   var newUser = new User(
     {
       username: req.body.username,
@@ -69,16 +77,21 @@ app.post('/register', (req, res)=>{
   });
 });
 
+function usernameToLowerCase(req, res, next){
+    req.body.username = req.body.username.toLowerCase();
+    next();
+}
+
 app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.post('/login', passport.authenticate('local',
+app.post('/login', usernameToLowerCase, passport.authenticate('local',
   {
     successRedirect: '/',
     failureRedirect: '/login'
   }), (req, res) => {
-    
+
 });
 
 // Logout Route
@@ -98,9 +111,23 @@ function isLoggedIn(req, res, next) {
 // End Authentication Routes
 // ==========================
 
+app.post('/post/new', (req, res)=> {
+  var post = req.body.post;
+  var author = {
+    id: req.user._id,
+    username: req.user.username,
+    firstName: req.user.firstName,
+    lastName: req.user.lastName
+  }
+  var newPost = {post: post, author: author};
+  Post.create(newPost);
+  res.redirect('/');
+});
+
 app.get('/activity', (req, res) =>{
   res.render('activity');
-})
+});
+
 
 app.get('/login', (req, res) => {
   res.render('login');

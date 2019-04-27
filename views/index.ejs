@@ -4,24 +4,42 @@
   <div class="home-container">
     <div class="sidebar">
       <div id="sidebar-profile" class="module">
-
         <div class="account">
-          <img src="img/avatar.png" alt="avatar">
-          <p>Benjamin Buck</p>
-          <small class="tag">@benjaminalan</small>
+          <img class="avatar" src="<%= currentUser.profileImage %>" alt="">
+
+          <!-- profile card -->
+          <div class="profile-name">
+            <p><%= currentUser.firstName + " " + currentUser.lastName %></p>
+            <p class="tag">@<%= currentUser.username %></p>
+          </div>
+
+          <!-- profile biography -->
+          <div class="profile-bio">
+            <p>I am a computer science student who likes to build interesing projects.</p>
+          </div>
+
+          <!-- profile statistics -->
+          <div class="profile-stats">
+            <div class="flex-fifty followers stats">
+              <h3>1003</h3>
+              <p>Followers</p>
+            </div>
+            <div class="flex-fifty posts stats">
+              <h3>10,302</h3>
+              <p>Posts</p>
+            </div>
+          </div>
+          <button class="sidebar-button">View Profile</button>
+          <button id="edit" class="sidebar-button edit">Profile Settings</button>
         </div>
-      </div>
-
-      <div class="profile module">
-
       </div>
     </div>
     <div class="feed" id="feed">
       <div class="module">
         <div class="content-padding newContent">
           <h2>Create a new post</h2>
-          <form action="">
-            <textarea name="name" id="newPost" rows="4" cols="80" placeholder="Write a new post"></textarea>
+          <form action="/post/new" method="POST">
+            <textarea name="post" id="newPost" rows="4" cols="80" placeholder="Write a new post"></textarea>
             <button class="btn">Create</button>
           </form>
         </div>
@@ -29,66 +47,31 @@
 
       <div class="module">
         <div class="content-padding recent-posts">
-          <div class="single-post">
-            <a href="#">
+
+          <% posts.forEach(function(post){ %>
+            <div class="single-post">
               <div class="userinfo">
-                <img class="avatar" src="/img/avatar.png" alt="avatar">
+                <img class="avatar" src="<%= currentUser.profileImage %>" alt="avatar">
                 <div class="username">
-                  <p class="userinfo-username">Benjamin Buck</p>
-                  <small class="tag">@benjaminalan</small>
+                  <p class="userinfo-username"><%=post.author.username%></p>
+                  <small class="tag">@<%=post.author.username%></small>
                 </div>
               </div>
               <div class="post-body">
-                <p>Post body will go here. This is a brand new post about things.</p>
+                <p><%=post.post%></p>
               </div>
               <div class="post-tags">
-                <small class="tag post-tag">@benjaminalan</small>
+                <a href="#"><small class="tag post-tag">#benjaminalan</small></a>
+                <a href="#"><small class="tag post-tag">#new</small></a>
               </div>
-            </a>
-            <div class="post-interactions">
-              <i class="far fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-reply"></i>
-            </div>
-
-          </div>
-
-          <div class="single-post">
-            <div class="userinfo">
-              <img class="avatar" src="/img/avatar.png" alt="avatar">
-              <div class="username">
-                <p class="userinfo-username">Benjamin Buck</p>
-                <small class="tag">#benjaminalan</small>
+              <div class="post-interactions">
+                <i class="far fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-reply"></i>
               </div>
             </div>
-            <div class="post-body">
-              <p>Post body will go here. This is a brand new post about things.</p>
-            </div>
-            <div class="post-tags">
-              <a href="#"><small class="tag post-tag">#benjaminalan</small></a>
-              <a href="#"><small class="tag post-tag">#new</small></a>
-            </div>
-            <div class="post-interactions">
-              <i class="far fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-reply"></i>
-            </div>
-          </div>
+          <% }); %>
 
-          <div class="single-post">
-            <div class="userinfo">
-              <img class="avatar" src="/img/avatar.png" alt="avatar">
-              <div class="username">
-                <p class="userinfo-username">Benjamin Buck</p>
-                <small class="tag">@benjaminalan</small>
-              </div>
-            </div>
-            <div class="post-body">
-              <p>Post body will go here. This is a brand new post about things.</p>
-            </div>
-            <div class="post-tags">
-              <small class="tag post-tag">@benjaminalan</small>
-            </div>
-            <div class="post-interactions">
-              <i class="far fa-heart"></i><i class="fas fa-retweet"></i><i class="fas fa-reply"></i>
-            </div>
-          </div>
+
+
         </div>
       </div>
     </div>

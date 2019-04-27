@@ -3,6 +3,10 @@ body {
   box-sizing: border-box;
 }
 
+.flex-fifty {
+  flex-basis: 50%;
+}
+
 .avatar {
   height: 40px;
   width: 40px;
@@ -53,23 +57,68 @@ textarea {
   color: gray;
 }
 
-// Sidebar profile
-#sidebar-profile {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 20px 0;
+.sidebar {
+  .account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0 0;
+  }
   img {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     overflow: hidden;
+    text-align: center;
     border-radius: 100%;
   }
 
-  .account {
-    display: flex;
+  .profile-bio {
+    padding: 20px 0;
+    font-size: 15px;
+    color: rgba(0,0,0,0.5);
   }
+
+  .profile-stats {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0,0,0,0.08);
+    margin: 10px 0 0;
+  }
+
+  .followers {
+    border-right: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .followers,
+  .posts {
+    width: 50%;
+    padding: 10px 0;
+  }
+
+  .sidebar-button {
+    height: 50px;
+    width: 100%;
+    background-color: $lime;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+  }
+  .sidebar-button:hover {
+    background-color: $hover;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  // Edit Profile Button
+  .sidebar-button {
+    background-color: $navy;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
 }
+
 
 #feed {
   .btn {

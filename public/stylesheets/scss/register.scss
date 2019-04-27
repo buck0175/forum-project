@@ -45,8 +45,7 @@
   }
 }
 
-.registration-form form input,
-.registration-form form label{
+.registration-input {
   display: block;
 }
 
@@ -54,7 +53,7 @@ fieldset {
   border: none;
   margin-bottom: 10px;
   label {
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 17px;
     font-weight: bold;
   }

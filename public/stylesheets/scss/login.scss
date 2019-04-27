@@ -112,12 +112,12 @@ $hover: #0da57a;
     margin: 0 auto 15px;
   }
 
-  .signup {
+  .signup a {
     color: $lime;
-    transition: 0.5s;
+    text-decoration: none;
   }
 
-  .signup:hover {
+  .signup a:hover {
     color: $hover;
     transition: 0.5s;
     cursor: pointer;
