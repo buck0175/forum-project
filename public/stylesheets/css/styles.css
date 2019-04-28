@@ -176,6 +176,15 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+#logo {
+  color: white;
+  text-decoration: none;
+}
+
+.hide {
+  display: block;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -308,6 +317,34 @@ body {
   margin-left: 10px;
 }
 
+.dropdown {
+  position: absolute;
+  left: 86rem;
+  top: 60px;
+  z-index: 1;
+  display: none;
+}
+
+.dropdown li {
+  background-color: #00171c;
+  padding: 10px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown li:hover {
+  cursor: pointer;
+  background-color: #0da57a;
+}
+
+.dropdown ul {
+  list-style: none;
+}
+
 body {
   background-color: #F2F2F2;
   -webkit-box-sizing: border-box;
@@ -334,6 +371,23 @@ body {
   border: none;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.addImage {
+  padding: 5px 10px;
+  background-color: #00171c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.addImage:hover {
+  background-color: #0da57a;
+  cursor: pointer;
 }
 
 .content-padding {
@@ -425,13 +479,14 @@ textarea {
 }
 
 .sidebar .sidebar-button {
-  height: 50px;
+  padding: 20px 0;
   width: 100%;
   background-color: #0ed9a0;
   border: none;
   font-weight: bold;
   color: white;
   font-size: 15px;
+  text-decoration: none;
 }
 
 .sidebar .sidebar-button:hover {
@@ -445,6 +500,44 @@ textarea {
 .sidebar .sidebar-button {
   background-color: #00171c;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .recommended-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.sidebar .title {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.sidebar .follow {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0ed9a0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.sidebar .follow:hover {
+  background-color: #0da57a;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#feed .new-content-form {
+  margin: 20px 0;
 }
 
 #feed .btn {

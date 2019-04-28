@@ -2,6 +2,15 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+#logo {
+  color: white;
+  text-decoration: none;
+}
+
+.hide {
+  display: block;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -10,7 +19,6 @@ body {
 .lime-text {
   color: $lime;
 }
-
 
 
 #main-navigation {
@@ -114,5 +122,30 @@ body {
   .logout i {
     color: white;
     margin-left: 10px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  left: 86rem;
+  top: 60px;
+  z-index: 1;
+  display: none;
+  li {
+    background-color: $navy;
+    padding: 10px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    a {
+      color: white;
+      text-decoration: none
+    }
+
+  }
+  li:hover {
+    cursor: pointer;
+    background-color: $hover;
+  }
+  ul {
+    list-style: none;
   }
 }

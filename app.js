@@ -131,10 +131,14 @@ app.get('/activity', (req, res) =>{
 
 app.get('/login', (req, res) => {
   res.render('login');
-})
+});
 
-app.get('/forum', (req, res) => {
-  res.render('forum');
+app.get('/user', (req, res) => {
+  res.render('profile');
+});
+
+app.get('/settings', isLoggedIn, (req, res) => {
+  res.render('settings');
 });
 
 

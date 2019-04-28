@@ -24,6 +24,21 @@ body {
   font-weight: bold;
 }
 
+.addImage {
+  padding: 5px 10px;
+  background-color: $navy;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.addImage:hover {
+  background-color: $hover;
+  cursor: pointer;
+}
+
 .content-padding {
   padding: 10px 30px;
 }
@@ -97,14 +112,16 @@ textarea {
   }
 
   .sidebar-button {
-    height: 50px;
+    padding: 20px 0;
     width: 100%;
     background-color: $lime;
     border: none;
     font-weight: bold;
     color: white;
     font-size: 15px;
+    text-decoration: none;
   }
+  
   .sidebar-button:hover {
     background-color: $hover;
     transition: 0.2s;
@@ -117,10 +134,41 @@ textarea {
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
+  .recommended-profile {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .title {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .follow  {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: $lime;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  .follow:hover {
+    background-color: $hover;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
 }
 
 
 #feed {
+  .new-content-form {
+    margin: 20px 0;
+  }
+
   .btn {
     display: block;
   }

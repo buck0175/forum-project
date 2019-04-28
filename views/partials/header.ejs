@@ -3,7 +3,7 @@
 <header id="main-navigation">
   <div class="container navbar">
     <div class="left">
-      <h1>ADV<span class="lime-text">ENTR.</span></h1>
+      <a id="logo" href="/"><h1>ADV<span class="lime-text">ENTR.</span></h1></a>
       <form action="" class="search" method="get">
         <input id="search" type="text" placeholder="Search...">
         <button class="search-btn"><i class="fas fa-search"></i></button>
@@ -20,8 +20,18 @@
       <ul >
         <li class="user-nav">Hello <a href="#" style="display: inline-block;"><%= currentUser.firstName %></a></li>
       </ul>
-      <a href="#"><img class="avatar" src="/img/avatar.png" alt="avatar"></a>
-      <a href="/logout" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+      <a href="#"><img class="avatar" src="<%= currentUser.profileImage %> " alt="avatar"></a>
+      <a href="#" id="dropdown" class="logout"><i class="fas fa-ellipsis-v"></i></a>
     </div>
   </div>
 </header>
+
+<div class="dropdown">
+  <ul>
+    <li><a href="#">Logout</a></li>
+    <li><a href="#">Logout</a></li>
+    <li><a href="#">Logout</a></li>
+    <li><a href="#">Logout</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</div>
