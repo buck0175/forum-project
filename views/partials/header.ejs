@@ -21,17 +21,15 @@
         <li class="user-nav">Hello <a href="#" style="display: inline-block;"><%= currentUser.firstName %></a></li>
       </ul>
       <a href="#"><img class="avatar" src="<%= currentUser.profileImage %> " alt="avatar"></a>
-      <a href="#" id="dropdown" class="logout"><i class="fas fa-ellipsis-v"></i></a>
+      <a id="dropdown" class="logout"><i class="fas fa-ellipsis-v"></i></a>
     </div>
   </div>
 </header>
 
-<div class="dropdown">
+<div id="menu" class="dropdown">
   <ul>
-    <li><a href="#">Logout</a></li>
-    <li><a href="#">Logout</a></li>
-    <li><a href="#">Logout</a></li>
-    <li><a href="#">Logout</a></li>
-    <li><a href="#">Logout</a></li>
+    <li><a href="#">My Friends</a></li>
+    <li><a href="/user">My Profile</a></li>
+    <li><a href="/logout">Logout</a></li>
   </ul>
 </div>

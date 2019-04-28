@@ -1,8 +1,10 @@
 const $dropdown = document.getElementById('dropdown');
+const $menu = document.getElementById('menu');
 
 $dropdown.addEventListener('click', (e) => {
-  return $dropdown.classList.toggle('hide');
+  $menu.classList.toggle("hide");
 });
+
 
 // if($dropdown.style.display === "block"){
 //   $dropdown.addEventListener('click', (e) => {
